@@ -52,7 +52,7 @@ compImg.style.visibility = "hidden";
 
 rockButton.addEventListener("click",()=>{
     userImg.style.visibility = "visible";
-    userImg.src ="images/stone.png";
+    userImg.src ="/images/stone.png";
     userChoice ="Rock";
     getComputerChoice()
     compare(userChoice,getComputerChoice());
@@ -62,7 +62,7 @@ rockButton.addEventListener("click",()=>{
 
 paperButton.addEventListener("click",()=>{
     userImg.style.visibility = "visible";
-    userImg.src ="images/paper.png";
+    userImg.src ="/images/paper.png";
     userChoice ="Paper";
     getComputerChoice()
     compare(userChoice,getComputerChoice());
@@ -71,7 +71,7 @@ paperButton.addEventListener("click",()=>{
 
 scissorsButton.addEventListener("click",()=>{
     userImg.style.visibility = "visible";
-    userImg.src ="images/scissor.png";
+    userImg.src ="/images/scissor.png";
     userChoice ="Scissors";
     getComputerChoice()
     compare(userChoice,getComputerChoice());
