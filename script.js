@@ -33,24 +33,36 @@ function getUserChoice(){
 
 var userScore = 0;
 var CompScore = 0;
-var roundNum  = 0;
+var roundNum  = 1;
 
 
 //console.log("Comp: "+getComputerChoice())
 //console.log("User: " +getUserChoice())
 
 function playRound(userChoice,compChoice){
+    console.log("Round - "+ roundNum);
     console.log(userChoice+" VS "+compChoice);
 
     if (userChoice === compChoice){
         console.log("It's a Draw -" + "You both played "+userChoice);
+        
     }
     if(userChoice === "Rock" && compChoice ==="Scissors"|| userChoice === "Paper" && compChoice ==="Rock"||userChoice === "Scissors" && compChoice ==="Paper"){
-        console.log("You Win!");     
+        console.log("You Win!");    
+        userScore++; 
     }
     if(userChoice === "Rock" && compChoice ==="Paper"|| userChoice === "Paper" && compChoice ==="Scissors"||userChoice === "Scissors" && compChoice ==="Rock"){
-        console.log("You Lost!");     
+        console.log("You Lost!");   
+        CompScore++  
     }
+    roundNum++;
+    console.log("User-Score-"+ userScore);
+    console.log("Computer-Score-"+ CompScore);
 }
 
-playRound(getUserChoice(),getComputerChoice())
+
+
+
+for (let i = 0; i < 5; i++) {
+    playRound(getUserChoice(),getComputerChoice());
+  }
