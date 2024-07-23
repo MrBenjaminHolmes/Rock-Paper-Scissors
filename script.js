@@ -69,3 +69,14 @@
 // console.log("---FINAL SCORES---")
 // console.log("Your Score-"+ userScore);
 // console.log("Computer Score-"+ CompScore+"\n");
+
+
+const rockButton = document.querySelector("button.rock");
+console.log(rockButton);
+const paperButton = document.querySelector("button.paper");
+const scissorsButton = document.querySelector("button.scissors");
+
+
+rockButton.addEventListener("click",()=>{
+    alert("hello");
+})
