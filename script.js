@@ -27,12 +27,30 @@ function getUserChoice(){
     if (userChoice.toLowerCase() === "scissors"){
         userChoice = "Scissors";
     }
+    
     return userChoice;
 }
 
 var userScore = 0;
 var CompScore = 0;
+var roundNum  = 0;
 
 
-console.log("Comp: "+getComputerChoice())
-console.log("User: " +getUserChoice())
+//console.log("Comp: "+getComputerChoice())
+//console.log("User: " +getUserChoice())
+
+function playRound(userChoice,compChoice){
+    console.log(userChoice+" VS "+compChoice);
+
+    if (userChoice === compChoice){
+        console.log("It's a Draw -" + "You both played "+userChoice);
+    }
+    if(userChoice === "Rock" && compChoice ==="Scissors"|| userChoice === "Paper" && compChoice ==="Rock"||userChoice === "Scissors" && compChoice ==="Paper"){
+        console.log("You Win!");     
+    }
+    if(userChoice === "Rock" && compChoice ==="Paper"|| userChoice === "Paper" && compChoice ==="Scissors"||userChoice === "Scissors" && compChoice ==="Rock"){
+        console.log("You Lost!");     
+    }
+}
+
+playRound(getUserChoice(),getComputerChoice())
