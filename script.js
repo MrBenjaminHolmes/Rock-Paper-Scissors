@@ -16,8 +16,23 @@ function getComputerChoice(){
     return compChoice;
 }
 
+function getUserChoice(){
+    var userChoice = prompt("What's your choice?");
+    if (userChoice.toLowerCase() === "rock"){
+        userChoice = "Rock";
+    }
+    if (userChoice.toLowerCase() === "paper"){
+        userChoice = "Paper";
+    }
+    if (userChoice.toLowerCase() === "scissors"){
+        userChoice = "Scissors";
+    }
+    return userChoice;
+}
+
+var userScore = 0;
+var CompScore = 0;
 
 
-
-console.log(getComputerChoice())
-
+console.log("Comp: "+getComputerChoice())
+console.log("User: " +getUserChoice())
