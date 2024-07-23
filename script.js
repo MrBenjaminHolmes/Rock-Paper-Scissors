@@ -72,11 +72,19 @@
 
 
 const rockButton = document.querySelector("button.rock");
-console.log(rockButton);
 const paperButton = document.querySelector("button.paper");
 const scissorsButton = document.querySelector("button.scissors");
 
 
 rockButton.addEventListener("click",()=>{
-    alert("hello");
+    const userImg = document.querySelector("img").src ="images/stone.png";
+    
+})
+
+paperButton.addEventListener("click",()=>{
+    const userImg = document.querySelector("img").src ="images/paper.png";
+})
+
+scissorsButton.addEventListener("click",()=>{
+    const userImg = document.querySelector("img").src ="images/scissor.png";
 })
