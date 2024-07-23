@@ -40,7 +40,7 @@ var roundNum  = 1;
 //console.log("User: " +getUserChoice())
 
 function playRound(userChoice,compChoice){
-    console.log("Round - "+ roundNum);
+    console.log("-----Round "+ roundNum+"-----");
     console.log(userChoice+" VS "+compChoice);
 
     if (userChoice === compChoice){
@@ -56,8 +56,8 @@ function playRound(userChoice,compChoice){
         CompScore++  
     }
     roundNum++;
-    console.log("User-Score-"+ userScore);
-    console.log("Computer-Score-"+ CompScore);
+    console.log("Your Score-"+ userScore);
+    console.log("Computer Score-"+ CompScore+"\n");
 }
 
 
@@ -66,3 +66,6 @@ function playRound(userChoice,compChoice){
 for (let i = 0; i < 5; i++) {
     playRound(getUserChoice(),getComputerChoice());
   }
+console.log("---FINAL SCORES---")
+console.log("Your Score-"+ userScore);
+console.log("Computer Score-"+ CompScore+"\n");
