@@ -1,20 +1,7 @@
 // const choices = ["Rock", "Paper", "Scissors"];
-// const max =3;
 
-// function getComputerChoice(){
-//     var compChoice ="";
-//     var randValue= Math.floor(Math.random() * max);
-//     if(randValue === 0){
-//         compChoice = "Rock";
-//     }
-//     if(randValue === 1){
-//         compChoice = "Paper";
-//     }
-//     if(randValue === 2){
-//         compChoice = "Scissors";
-//     }
-//     return compChoice;
-// }
+
+
 
 // function getUserChoice(){
 //     var userChoice = prompt("What's your choice?");
@@ -70,21 +57,48 @@
 // console.log("Your Score-"+ userScore);
 // console.log("Computer Score-"+ CompScore+"\n");
 
+function getComputerChoice(){
+    const max =3;
+    var randValue= Math.floor(Math.random() * max);
+    if(randValue === 0){
+        compImg.style.visibility = "visible";
+        compImg.src ="images/stone.png";
+    }
+    if(randValue === 1){
+        compImg.style.visibility = "visible";
+        compImg.src ="images/paper.png";
+    }
+    if(randValue === 2){
+        compImg.style.visibility = "visible";
+        compImg.src ="images/scissor.png";
+    }
+    return compChoice;
+}
 
 const rockButton = document.querySelector("button.rock");
 const paperButton = document.querySelector("button.paper");
 const scissorsButton = document.querySelector("button.scissors");
 
+let userImg = document.querySelector("img");
+userImg.style.visibility = "hidden";
+let compImg = document.querySelector(".computerChoice")
+compImg.style.visibility = "hidden";
+
 
 rockButton.addEventListener("click",()=>{
-    const userImg = document.querySelector("img").src ="images/stone.png";
-    
+    userImg.style.visibility = "visible";
+    userImg.src ="images/stone.png";
+    getComputerChoice()
 })
 
 paperButton.addEventListener("click",()=>{
-    const userImg = document.querySelector("img").src ="images/paper.png";
+    userImg.style.visibility = "visible";
+    userImg.src ="images/paper.png";
+    getComputerChoice()
 })
 
 scissorsButton.addEventListener("click",()=>{
-    const userImg = document.querySelector("img").src ="images/scissor.png";
+    userImg.style.visibility = "visible";
+    userImg.src ="images/scissor.png";
+    getComputerChoice()
 })
